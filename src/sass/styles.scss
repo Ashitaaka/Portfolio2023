@@ -1,0 +1,373 @@
+@font-face {
+  font-family: Jaune;
+  font-weight: 100;
+  src: url('.././assets/fonts/Jaune-Midi-100.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Jaune;
+  font-weight: 300;
+  src: url('.././assets/fonts/Jaune-Midi-700.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Spotnik;
+  font-weight: 100;
+  src: url('.././assets/fonts/CA-Spotnik-100.otf') format('opentype');
+}
+
+@font-face {
+  font-family: Spotnik;
+  font-weight: 300;
+  src: url('.././assets/fonts/CA-Spotnik-300.otf') format('opentype');
+}
+
+@font-face {
+  font-family: Spotnik;
+  font-weight: 500;
+  src: url('.././assets/fonts/CA-Spotnik-700.otf') format('opentype');
+}
+
+$primaryColor : #5c6bdd;
+$secondaryColor :#e26b6b;
+$backgrounColor : #e9ebff;
+$displayFont : 'Jaune',
+serif;
+$textFont : 'Spotnik',
+sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e9ebff;
+  margin: auto;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: $textFont;
+  font-weight: 300;
+  font-size: 16px;
+  color: $primaryColor;
+}
+
+.App {
+  padding-top: 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: filter .6s ease;
+}
+
+a {
+  text-decoration: none;
+
+  &:visited {
+    color: $primaryColor;
+  }
+}
+
+h1 {
+  text-align: center;
+  font-family: $displayFont;
+  font-size: 14vw;
+  font-weight: 100;
+}
+
+.nav {
+  width: 70vw;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+
+  .nav-item {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    border-right: 1px solid $primaryColor;
+    font-size: clamp(13px, 2vw, 16px);
+
+    a {
+      text-decoration: none;
+      color: $primaryColor;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+      border-right: none;
+    }
+  }
+}
+
+.intro {
+  width: 75vw;
+  max-width: 800px;
+  font-size: clamp(20px, 4vw, 50px);
+  text-align: center;
+  letter-spacing: .1em;
+}
+
+.scroll {
+  margin: 2.5vw 0;
+  width: 4vw;
+  height: 7vw;
+  border-radius: 50vw;
+  border: .2vw solid $primaryColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects-container {
+  width: 100%;
+  border-top: clamp(2px, .2vw, 3px) solid $primaryColor;
+}
+
+.project {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 15vw;
+  padding: 0 5vw;
+  background-color: rgb(92, 107, 221);
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: soft-light;
+  display: flex;
+  align-items: center;
+
+
+  h2 {
+    text-align: left;
+    font-family: $textFont;
+    font-size: clamp(30px, 6.5vw, 120px);
+    font-weight: 300;
+    transition: color .5s ease-in-out;
+  }
+
+  p {
+    color: $primaryColor;
+    transition: color .5s ease-in-out;
+  }
+
+  .project-id {
+    text-decoration: underline;
+    font-size: clamp(14px, 2vw, 24px);
+  }
+
+  .project-content {
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(100px);
+
+    .project-name {
+      display: flex;
+      align-items: baseline;
+      gap: 1vw;
+    }
+
+    .project-client {
+      text-align: right;
+    }
+
+    .project-type {
+      font-family: $textFont;
+      font-size: clamp(12px, 1.4vw, 16px);
+      text-transform: uppercase;
+      letter-spacing: .4vw;
+    }
+
+    .client-name {
+      font-family: 'Spotnik';
+      font-size: clamp(18px, 2.5vw, 30px);
+      font-weight: 300;
+      letter-spacing: .2vw;
+    }
+  }
+}
+
+.hover.project .project-name {
+  transform: translateY(0%);
+}
+
+.hover.project .project-client {
+  transform: translateY(0%);
+}
+
+.animated-hr {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: $primaryColor;
+  width: 100%;
+  height: clamp(2px, .2vw, 3px);
+  transform: scaleX(0%);
+  transform-origin: left top;
+}
+
+
+
+.test {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: $backgrounColor;
+  transform: translateY(0%);
+  transition: transform .5s ease-in-out;
+}
+
+.project:hover .test {
+  transform: translateY(-100%);
+}
+
+.project:hover p,
+.project:hover h2 {
+  color: #fff;
+}
+
+/*ERROR PAGE*/
+#error-page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*PROJECT CARD*/
+.project-card {
+  width: 100vw;
+  height: 85%;
+  z-index: 100;
+  padding: 8vh 8vh;
+  position:fixed;
+  top:25%;
+  background-color: #fff;
+  border-radius: 2em 2em 0 0;
+  // box-shadow: 0 0 1em rgb(0, 0, 0, 0.1);
+  transform: translateY(100%);
+  transition: transform .5s ease-out;
+  overflow-y: scroll;  
+
+  h2 {
+    text-align: left;
+    font-family: $textFont;
+    font-size: clamp(30px, 7.5vw, 120px);
+    font-weight: 300;
+    transition: color .5s ease-in-out;
+    margin-bottom: 1em;
+  }
+
+  .closing-cross{
+    position: relative;
+    left: calc(100% - 50px);
+    height: 50px;
+    width: 50px;
+    border: 2px solid $primaryColor;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:before,
+    &:after{
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      left: 3px;
+      top: 22px;
+      content: "";
+      width: 40px;
+      height: 2px;
+      border-radius: 2px;
+      background-color: $primaryColor;
+    }
+    &:after{
+      transform: rotate(-45deg) ;
+    }
+    &:before{
+      transform: rotate(45deg) ;
+    }
+  }
+
+  img{
+    width: 100%;
+  }
+}
+
+.project-card-infos{
+  display: flex;
+  gap: 5vw;
+  align-items: flex-start;
+  margin-bottom: 3em;
+
+  p, ul{
+    font-weight: 100;
+    font-size: clamp(16px, 1.5vw, 20px);
+    letter-spacing: .07em;
+  }
+
+  .project-website{
+    font-family: $displayFont;
+    font-weight: 100;
+    font-size: clamp(16px, 1.5vw, 20px);
+  }
+  .arrow{
+    flex: 1;
+    font-family: $textFont;
+    font-size: 8vw;
+    font-weight: 100;
+  }
+
+  ul{
+    flex: 4;
+    text-transform: uppercase;
+    list-style-type: none;
+  }
+
+  li{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 0;
+    border-top: 1px solid $primaryColor;
+
+    &:last-child{
+      border-bottom: 1px solid $primaryColor;
+    }
+
+    p{
+      font-size: clamp(13px, 1.2vw, 15px);
+    }
+  }
+
+  .description{
+    flex: 6;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+}
+.expanded{
+  transform: translateY(0);
+}
+
+.blurred{
+  filter: blur(.6em);
+}
+
+.project-card-tags{
+  width: 100%;
+  background-color: #E8EAFF;
+}
