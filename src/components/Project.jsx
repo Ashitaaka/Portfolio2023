@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
@@ -50,8 +49,8 @@ function Project({
         scrollTrigger: {
           // markers: true,
           trigger: element,
-          start: "top 95%",
-          end: "top 85%",
+          start: "top 98%",
+          end: "top 90%",
           toggleActions: "start pause reverse pause",
           scrub: 3,
         },

@@ -1,8 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { CgScrollV } from "react-icons/cg";
 import Project from "./Project";
-import Nav from "./Nav";
+import Header from "./Header"
+import About from "./About";
+import MailBanner from "./MailBanner";
+import Stack from "./Stack";
+import Footer from "./Footer";
+import Contact from "./Contact";
 
 function Home({
   isBlurred,
@@ -14,20 +17,9 @@ function Home({
     
   return (
     <div className={isBlurred ? "App blurred" : "App"}>
-      {/* Navigation bar */}
-      <Nav />
-
-      {/* Title and intro */}
-      <h1 className="title">Oli<br />vier<br />Gom<br />ez</h1>
-      <p className="intro">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias,
-        laboriosam ut delectus quae repudiandae earum.
-      </p>
-
-      {/* Scroll icon */}
-      <div className="scroll">
-        <CgScrollV size={30} />
-      </div>
+      
+       {/* Title - intro - nav */}
+       <Header />
 
       {/* Projet container */}
       <div className="projects-container">
@@ -66,6 +58,18 @@ function Home({
           projectClient={"Personnal"}
         />
       </div>
+
+      {/* About */}
+      <About />
+      <MailBanner />
+      <Stack />
+
+      {/* Contact */}
+      <Contact />
+
+      {/* Footer */}
+      <Footer />
+      
     </div>
   );
 }
