@@ -15,7 +15,7 @@ const MailBanner = () => {
               // markers: true,
               trigger: mailScroll.current,
               start: "top 100%",
-              end: "top 50%",
+              end: "top 30%",
               toggleActions: "start resume reverse resume",
               scrub: 3,
             },

@@ -1,8 +1,9 @@
 import React, { useEffect, useRef } from 'react'
-import { CgScrollV } from "react-icons/cg";
-import gsap from 'gsap';
-import NavButton from './NavButton';
+import { CgScrollV } from "react-icons/cg"
+import gsap from 'gsap'
+import NavButton from './NavButton'
 import headerStamp from '../assets/images/header_stamp.svg'
+import { Link, animateScroll as scroll } from 'react-scroll'
 
 const Header = () => {
 
@@ -26,7 +27,7 @@ const Header = () => {
 
             <div className="title-nav">
 
-                <NavButton navButtonTitle="ABOUT" anchorLink="#"/>
+                <NavButton navButtonTitle="ABOUT" anchorLink="about-section"/>
 
                 <div className="title">
                     <img src={headerStamp} alt="developper stamp" className='header_stamp'/>
@@ -38,11 +39,27 @@ const Header = () => {
                     </h1>
                 </div>
                 
-                <NavButton navButtonTitle="CONTACT" anchorLink="#"/>
+                <NavButton navButtonTitle="CONTACT" anchorLink="contact-section"/>
 
                 <div className='mobile-nav'>
-                    <a href="#" className="nav-button-mobile">ABOUT</a>
-                    <a href="#" className="nav-button-mobile">CONTACT</a>
+                    <Link 
+                        to="about-section"
+                        smooth={true} 
+                        offset={-50} 
+                        duration={`function (scrollDistanceInPx) { return duration; }`} 
+                        className="nav-button-mobile"
+                    >
+                        ABOUT
+                    </Link>
+                    <Link
+                        to="contact-section"
+                        smooth={true} 
+                        offset={-50} 
+                        duration={`function (scrollDistanceInPx) { return duration; }`}
+                        href="#" className="nav-button-mobile"
+                    >
+                        CONTACT
+                    </Link>
                 </div>
 
             </div>

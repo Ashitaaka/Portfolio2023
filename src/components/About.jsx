@@ -1,9 +1,12 @@
 import React from 'react'
 import aboutStamp from '../assets/images/about_stamp.svg'
+import { Element } from 'react-scroll'
 
 const About = () => {
   return (
     <div className='about-container'>
+        <Element name="about-section" className="element"></Element>
+        {/* anchor for react-scroll */}
             <div className="about-title">
                 <h1>Designer & <br />developer</h1>
                 <img src={aboutStamp} className='about-stamp' alt="about stamp" />

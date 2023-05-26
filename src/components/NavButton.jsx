@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
-import { Link } from 'react-router-dom'
 import gsap from 'gsap'; 
+import { Link, animateScroll as scroll } from 'react-scroll'
 
 const NavButton = ({anchorLink, navButtonTitle}) => {
 
@@ -17,7 +17,12 @@ const NavButton = ({anchorLink, navButtonTitle}) => {
     }
 
   return (
-    <a
+    
+    <Link
+        to={anchorLink}
+        smooth={true} 
+        offset={-50} 
+        duration={`function (scrollDistanceInPx) { return duration; }`}
         className="nav-button" 
         onMouseEnter={aboutBtnAnimationIn} 
         onMouseLeave={aboutBtnAnimationOut}
@@ -25,7 +30,8 @@ const NavButton = ({anchorLink, navButtonTitle}) => {
         <p>{navButtonTitle}</p>
         <p className='white-link' ref={buttonTitle}>{navButtonTitle}</p>
         <div className="bg-link" ref={buttonBackground}></div>
-    </a>
+    </Link>
+    
   )
 }
 
