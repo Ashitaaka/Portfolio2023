@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 function ToDoList({isBlurred, setIsBlurred, expanded, setExpanded, selectedId}){
     console.log(selectedId);
@@ -10,14 +10,14 @@ function ToDoList({isBlurred, setIsBlurred, expanded, setExpanded, selectedId}){
         <main className={expanded ==="expanded" && selectedId === 1 ? "project-card expanded" : "project-card"}>
                 {/* Project header*/}
                 <section className="project-card-head">
-                    <Link 
+                    {/* <Link 
                         to={'/'}
                         onClick={()=>{
                             handleBgBlurred();
                             handleCardExpand();
                         }}>
                         <div className="closing-cross"></div>
-                    </Link>
+                    </Link> */}
                     <h2>
                         To Do List
                     </h2>

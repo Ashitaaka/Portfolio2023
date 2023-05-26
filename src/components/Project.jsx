@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 gsap.registerEffect(ScrollTrigger);
 
@@ -62,15 +62,15 @@ function Project({
   }, []);
 
   return (
-    <Link
-      to={projectLink}
-      onClick={() => {
-        handleCardExpand();
-        handleBgBlurred();
-        handleSelectedId(projectId);
-        console.log(` test ${projectId}`);
-      }}
-    >
+    // <Link
+    //   to={projectLink}
+    //   onClick={() => {
+    //     handleCardExpand();
+    //     handleBgBlurred();
+    //     handleSelectedId(projectId);
+    //     console.log(` test ${projectId}`);
+    //   }}
+    // >
       <div className="project" style={{ backgroundImage: `url(${imageUrl})` }}>
         <div className="project-content">
           <div className="project-name">
@@ -87,7 +87,7 @@ function Project({
         <div className="test"></div>
         <div className="animated-hr"></div>
       </div>
-    </Link>
+    // </Link>
   );
 }
 

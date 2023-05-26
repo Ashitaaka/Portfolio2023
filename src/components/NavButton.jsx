@@ -17,7 +17,7 @@ const NavButton = ({anchorLink, navButtonTitle}) => {
     }
 
   return (
-    <Link
+    <a
         to={anchorLink}
         className="nav-button" 
         onMouseEnter={aboutBtnAnimationIn} 
@@ -26,7 +26,7 @@ const NavButton = ({anchorLink, navButtonTitle}) => {
         <p>{navButtonTitle}</p>
         <p className='white-link' ref={buttonTitle}>{navButtonTitle}</p>
         <div className="bg-link" ref={buttonBackground}></div>
-    </Link>
+    </a>
   )
 }
 

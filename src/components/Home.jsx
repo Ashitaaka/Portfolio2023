@@ -6,6 +6,7 @@ import MailBanner from "./MailBanner";
 import Stack from "./Stack";
 import Footer from "./Footer";
 import Contact from "./Contact";
+import spotcastBgPicture from "../assets/images/pexels-polina-kovaleva-5717415.jpg"
 
 function Home({
   isBlurred,
@@ -32,28 +33,28 @@ function Home({
           projectId={1}
           projectLink={"todolist"}
           projectName={"To Do List"}
-          imageUrl={"src/assets/images/pexels-polina-kovaleva-5717415.jpg"}
+          imageUrl={spotcastBgPicture}
           projectType={"Training"}
           projectClient={"Personnal"}
         />
         <Project
           projectId={2}
           projectName={"Spotcast"}
-          imageUrl={"src/assets/images/pexels-polina-kovaleva-5717415.jpg"}
+          imageUrl={spotcastBgPicture}
           projectType={"Training"}
           projectClient={"Personnal"}
         />
         <Project
           projectId={3}
           projectName={"Undefined"}
-          imageUrl={"src/assets/images/pexels-polina-kovaleva-5717415.jpg"}
+          imageUrl={spotcastBgPicture}
           projectType={"School project"}
           projectClient={"Personnal"}
         />
         <Project
           projectId={4}
           projectName={"Speech"}
-          imageUrl={"src/assets/images/pexels-polina-kovaleva-5717415.jpg"}
+          imageUrl={spotcastBgPicture}
           projectType={"School project"}
           projectClient={"Personnal"}
         />
