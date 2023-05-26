@@ -24,6 +24,7 @@ function Home({
 
       {/* Projet container */}
       <div className="projects-container">
+        
         <Project
           isBlurred={isBlurred}
           setIsBlurred={setIsBlurred}

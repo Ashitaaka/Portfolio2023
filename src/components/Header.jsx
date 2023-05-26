@@ -23,8 +23,11 @@ const Header = () => {
         {/* Title - intro - nav */}
         <div className="title-container">
             <p className="surtitre">OLIVIER GOMEZ PORTFOLIO</p>
+
             <div className="title-nav">
+
                 <NavButton navButtonTitle="ABOUT" anchorLink="#"/>
+
                 <div className="title">
                     <img src={headerStamp} alt="developper stamp" className='header_stamp'/>
                     <h1>
@@ -34,7 +37,14 @@ const Header = () => {
                         ez
                     </h1>
                 </div>
+                
                 <NavButton navButtonTitle="CONTACT" anchorLink="#"/>
+
+                <div className='mobile-nav'>
+                    <a href="#" className="nav-button-mobile">ABOUT</a>
+                    <a href="#" className="nav-button-mobile">CONTACT</a>
+                </div>
+
             </div>
             <p className="intro">
                 Explorez l'univers créatif d'un développeur web et graphiste passionné 

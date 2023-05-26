@@ -156,6 +156,10 @@ a {
     align-items: center;
   }
 
+  .mobile-nav{
+    display: none;
+  }
+
   .nav-button {
     position: relative;
     display: flex;
@@ -589,7 +593,7 @@ a {
 
   img {
     position: relative;
-    width: clamp(90px, 16vw, 180px);
+    width: clamp(120px, 16vw, 180px);
     margin: auto;
     padding-bottom: 2vw;
   }
@@ -617,11 +621,134 @@ footer {
 /* -----------MEDIA QUERIES ---------- */
 
 @media screen and (max-width:530px) {
+
+  /* HEADER */
   .title-container {
     padding: 1em;
 
     .intro {
-      width: 100%;
+      width: 90%;
+    }
+  
+    .title-nav {
+      flex-direction: column;
+    }
+  
+    .mobile-nav{
+      display: flex;
+      gap: 1em;
+      margin-bottom: 1em;
+    }
+
+    .nav-button-mobile{
+      cursor: pointer;
+      padding: .65em 1.5em;
+      border: $primaryColor solid clamp(1px, .25vw, 2px);
+      background-color: $backgrounColor;
+      border-radius: 50px;
+      font-size: clamp(11px, 2vw, 18px);
+
+      &:hover{
+        background-color: $primaryColor;
+        color: #fff;
+      }
+    }
+
+    .nav-button {
+      display: none;
     }
   }
+
+  /* PROJECT LIST*/
+  .project {
+    height: 22vw;
+  
+    h2 {
+      font-size: clamp(25px, 8vw, 50px);
+    }
+  
+    .project-content {
+  
+      .project-type {
+        font-size: clamp(10px, 2.2vw, 12px);
+        letter-spacing: .2vw;
+      }
+  
+      .client-name {
+        font-size: clamp(16px, 4.5vw, 20px);
+        letter-spacing: 0;
+      }
+    }
+  }
+
+  /* ABOUT */ 
+  .about-container {
+    padding: 14vw 5vw 12vw;
+
+    h1 {
+      font-size: clamp(40px, 11vw, 60px);
+    }
+  
+    .about-stamp {
+      width: clamp(70px, 17vw, 140px);
+      left: -8vw;
+      top: -6vw;
+    }
+  
+    .about-content {
+      flex-direction: column-reverse;
+    }
+  
+    .about-text {
+      
+      .chapeau {
+        font-size: clamp(18px, 4vw, 40px);
+        font-style: oblique;
+        margin-bottom: 5vw;
+      }
+  
+      p {
+        font-size: .85em;
+      }
+    }
+
+    .skills { 
+      gap: 1em;
+  
+      h3 {
+        font-size: .9em;
+        letter-spacing: .1em;
+        margin-bottom: .5em;
+      }
+  
+      p {
+        font-size: .75em;
+      }
+    }
+  } 
+
+  /* CONTACT */
+  .contact_container {
+  
+    p {
+      font-size: clamp(20px, 7vw, 30px);
+    }
+
+    img {
+      width: clamp(80px, 25vw, 100px);
+    }
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 2.7vw 0;
+
+    .footer_container {
+      width: 70%;
+      gap: 1.5em;
+      justify-content: center;
+    }
+  }
+
 }
+

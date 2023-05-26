@@ -21,13 +21,13 @@ function App() {
         setExpanded = {setExpanded}
         setSelectedId = {setSelectedId}
       />
-      <ToDoList 
+      {/* <ToDoList 
         isBlurred = {isBlurred}
         setIsBlurred = {setIsBlurred}
         expanded = {expanded}
         setExpanded = {setExpanded}
         selectedId = {selectedId}
-      />
+      /> */}
     </div>
   )
 }

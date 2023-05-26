@@ -18,7 +18,6 @@ const NavButton = ({anchorLink, navButtonTitle}) => {
 
   return (
     <a
-        to={anchorLink}
         className="nav-button" 
         onMouseEnter={aboutBtnAnimationIn} 
         onMouseLeave={aboutBtnAnimationOut}

@@ -12,7 +12,7 @@ const MailBanner = () => {
 
         gsap.to(mailScroll.current, {
             scrollTrigger: {
-              markers: true,
+              // markers: true,
               trigger: mailScroll.current,
               start: "top 100%",
               end: "top 50%",
