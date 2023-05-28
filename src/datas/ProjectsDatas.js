@@ -5,7 +5,7 @@ const projectDatas =[
         subtitle : "Surf App",
         images : {
             thumbnail : "src/assets/images/thumbnails/spotcast_thumb.jpg",
-            picture : "../src/assets/images/pictures/spotcast_movie.mp4"
+            picture : "../src/assets/images/pictures/spotcast_motion.mp4"
         },
         client : "School",
         year : "2023",
