@@ -449,53 +449,13 @@ a {
     }
   }
 
+  .project_single_footer{
+    justify-content: flex-end;
+  }
+
 }
 
-// .project-card-infos {
-  
-
-//   p,
-//   ul {
-//     font-weight: 100;
-//     font-size: clamp(16px, 1.5vw, 20px);
-//     letter-spacing: .07em;
-//   }
-
-//   .project-website {
-//     font-family: $displayFont;
-//     font-weight: 100;
-//     font-size: clamp(16px, 1.5vw, 20px);
-//   }
-
-
-//   ul {
-//     flex: 4;
-//     text-transform: uppercase;
-//     list-style-type: none;
-//   }
-
-//   li {
-//     display: flex;
-//     justify-content: space-between;
-//     padding: 1em 0;
-
-//     p {
-//       font-size: clamp(12px, 1.2vw, 15px);
-//     }
-//   }
-
-//   .description {
-//     flex: 6;
-//     height: 100%;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-between;
-//   }
-
-// }
-
 /*ABOUT*/
-
 .about-container {
   background-color: $primaryColor;
   position: relative;
@@ -719,6 +679,73 @@ footer {
     }
   }
 
+  /*PROJECT DETAILS CARD*/
+  .project_details{
+  
+
+    .back_home_btn{
+      letter-spacing: .05em;
+      font-size: .75em;
+    }
+
+    .project_title{
+      padding-bottom: 2.5em;
+
+      p{
+        letter-spacing: .05em;
+        font-size: clamp(13px, 2.2vw, 18px);
+      }
+    }
+
+    .project-card-infos{
+      flex-direction: column;
+
+      .arrow{
+        display: none;
+      }
+
+      .project_infos_table{
+        flex: 1;
+        font-size: .8em;
+      }
+
+      .description{
+        flex: 1;
+        font-size: .95em;
+      }
+    }
+
+    .project_stack{
+
+      ul{
+        display: flex;
+        flex-wrap: wrap;
+        gap: .5em;
+        list-style-type: none;
+      }
+
+      li{
+        font-size: clamp(14px, 2.2vw, 18px);
+      }
+    }
+
+    .project_footer{
+      // display: flex;
+      // justify-content: space-between;
+      // margin-bottom: 1em;
+
+      .previous_project, .next_project{
+        h2{
+          font-size:1.5em
+        }
+
+        .previous_button, .next_button{
+          font-size: .8em;
+        }
+      }
+    }
+  }
+  
   /* ABOUT */ 
   .about-container {
     padding: 14vw 5vw 12vw;

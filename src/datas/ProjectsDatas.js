@@ -94,7 +94,7 @@ const projectDatas =[
             "CSS 3", 
             "Git"
         ],
-        backgroundColor : "#7a6fd6",
+        backgroundColor : "#4c4c72",
         color : "#f1e8f6"
     },
 ];
