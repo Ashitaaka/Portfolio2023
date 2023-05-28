@@ -1,7 +1,7 @@
 import React from 'react'
 import { useParams } from "react-router-dom";
-import ProjectsDatas from '../datas/ProjectsDatas'
 import { Link } from 'react-router-dom';
+import ProjectsDatas from '../datas/ProjectsDatas'
 
 const ProjectDetails = () => {
 
@@ -108,7 +108,6 @@ const ProjectDetails = () => {
       <div className="project_stack">
         <ul>
           {
-            projectDatas &&
             projectDatas.stack.map((stack, index) => (
               <li 
                 key={index} 
@@ -122,6 +121,7 @@ const ProjectDetails = () => {
         </ul>
       </div>
 
+      {/* Footer */}
       <div className={projectDatas.id === 1 ? "project_single_footer project_footer" : "project_footer"}>
         {projectDatas.id > 1 
           ? <Link 

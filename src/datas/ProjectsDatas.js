@@ -1,10 +1,12 @@
+
+
 const projectDatas =[
     {
         id: 1,
         title : "Spotcast",
         subtitle : "Surf App",
         images : {
-            thumbnail : "src/assets/images/thumbnails/spotcast_thumb.jpg",
+            thumbnail : "../src/assets/images/thumbnails/spotcast_thumb.jpg",
             picture : "../src/assets/images/pictures/spotcast_motion.mp4"
         },
         client : "School",

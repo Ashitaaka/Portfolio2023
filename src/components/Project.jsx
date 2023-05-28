@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
+
 gsap.registerEffect(ScrollTrigger);
 
 function Project({
@@ -16,6 +17,7 @@ function Project({
     const projectContentAll = gsap.utils.toArray(".project-content");
     const projectHrAll = gsap.utils.toArray(".animated-hr");
 
+    console.log(images.thumbnail);
     projectContentAll.forEach((el) => {
       gsap.to(el, {
         scrollTrigger: {
