@@ -22,7 +22,7 @@ const NavButton = ({anchorLink, navButtonTitle}) => {
         to={anchorLink}
         smooth={true} 
         offset={-50} 
-        duration={`function (scrollDistanceInPx) { return duration; }`}
+        duration={1000}
         className="nav-button" 
         onMouseEnter={aboutBtnAnimationIn} 
         onMouseLeave={aboutBtnAnimationOut}

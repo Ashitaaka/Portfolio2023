@@ -46,7 +46,7 @@ const Header = () => {
                         to="about-section"
                         smooth={true} 
                         offset={-50} 
-                        duration={`function (scrollDistanceInPx) { return duration; }`} 
+                        duration={1000} 
                         className="nav-button-mobile"
                     >
                         ABOUT
@@ -55,7 +55,7 @@ const Header = () => {
                         to="contact-section"
                         smooth={true} 
                         offset={-50} 
-                        duration={`function (scrollDistanceInPx) { return duration; }`}
+                        duration={1000}
                         href="#" className="nav-button-mobile"
                     >
                         CONTACT

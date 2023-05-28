@@ -1,27 +1,16 @@
 import { useEffect } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 gsap.registerEffect(ScrollTrigger);
 
 function Project({
-  imageUrl,
-  projectLink,
-  projectName,
-  projectId,
-  projectType,
-  projectClient,
-  isBlurred,
-  setIsBlurred,
-  expanded,
-  setExpanded,
-  setSelectedId,
+  id,
+  title,
+  subtitle,
+  images,
+  client,
+  type
 }) {
-
-  const handleBgBlurred = () =>
-    isBlurred ? setIsBlurred("") : setIsBlurred("blurred");
-  const handleCardExpand = () =>
-    expanded === "" ? setExpanded("expanded") : setExpanded("");
-  const handleSelectedId = (projectId) => setSelectedId(projectId);
 
   useEffect(() => {
     const projectContentAll = gsap.utils.toArray(".project-content");
@@ -62,32 +51,26 @@ function Project({
   }, []);
 
   return (
-    // <Link
-    //   to={projectLink}
-    //   onClick={() => {
-    //     handleCardExpand();
-    //     handleBgBlurred();
-    //     handleSelectedId(projectId);
-    //     console.log(` test ${projectId}`);
-    //   }}
-    // >
-      <div className="project" style={{ backgroundImage: `url(${imageUrl})` }}>
-        <div className="project-content">
-          <div className="project-name">
-            <p className="project-id">
-              {projectId < 10 ? `0${projectId}` : projectId}
-            </p>
-            <h2 className="project-title">{projectName}</h2>
+
+      <Link to={`/projects/${title}`}>
+        <div className="project" style={{ backgroundImage: `url(${images.thumbnail})` }}>
+          <div className="project-content">
+            <div className="project-name">
+              <p className="project-id">
+                {id < 10 ? `0${id}` : id}
+              </p>
+              <h2 className="project-title">{title}</h2>
+            </div>
+            <div className="project-client">
+              <p className="project-type">{subtitle}</p>
+              <p className="client-name">{client}</p>
+            </div>
           </div>
-          <div className="project-client">
-            <p className="project-type">{projectType}</p>
-            <p className="client-name">{projectClient}</p>
-          </div>
+          <div className="test"></div>
+          <div className="animated-hr"></div>
         </div>
-        <div className="test"></div>
-        <div className="animated-hr"></div>
-      </div>
-    // </Link>
+      </Link>
+
   );
 }
 

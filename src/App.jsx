@@ -1,26 +1,25 @@
+import { Routes, Route } from "react-router-dom";
 import Home from './components/Home';
-import { Outlet } from 'react-router-dom';
-import { useState } from 'react';
-import ToDoList from './components/ToDoList';
+import ProjectDetails from './components/ProjectDetails'
 
 //to implement 'ScrollTriger GSAP'
 gsap.registerEffect(ScrollTrigger); 
 
 function App() {
-
-  const [isBlurred, setIsBlurred] = useState(false);
-  const [expanded, setExpanded] = useState("");
-  const [selectedId, setSelectedId] = useState();
     
   return (
     <div>
-      <Home 
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects/:id" element={<ProjectDetails />} />
+      </Routes>
+      {/* <Home 
         isBlurred = {isBlurred}
         setIsBlurred = {setIsBlurred}
         expanded = {expanded}
         setExpanded = {setExpanded}
         setSelectedId = {setSelectedId}
-      />
+      /> */}
       {/* <ToDoList 
         isBlurred = {isBlurred}
         setIsBlurred = {setIsBlurred}

@@ -1,10 +1,7 @@
 import React from "react"
 // import { Link } from 'react-router-dom';
 
-function ToDoList({isBlurred, setIsBlurred, expanded, setExpanded, selectedId}){
-    console.log(selectedId);
-    const handleBgBlurred = () => isBlurred ? setIsBlurred("") : setIsBlurred("blurred");
-    const handleCardExpand = () => expanded ==="" ? setExpanded("expanded") : setExpanded(""); 
+function ToDoList(){
 
     return(
         <main className={expanded ==="expanded" && selectedId === 1 ? "project-card expanded" : "project-card"}>

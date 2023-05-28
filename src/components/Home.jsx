@@ -6,7 +6,8 @@ import MailBanner from "./MailBanner";
 import Stack from "./Stack";
 import Footer from "./Footer";
 import Contact from "./Contact";
-import spotcastBgPicture from "../assets/images/pexels-polina-kovaleva-5717415.jpg"
+
+import ProjectDatas from "../datas/ProjectsDatas";
 
 function Home({
   isBlurred,
@@ -24,41 +25,12 @@ function Home({
 
       {/* Projet container */}
       <div className="projects-container">
-        
-        <Project
-          isBlurred={isBlurred}
-          setIsBlurred={setIsBlurred}
-          expanded={expanded}
-          setExpanded={setExpanded}
-          setSelectedId={setSelectedId}
-          projectId={1}
-          projectLink={"todolist"}
-          projectName={"To Do List"}
-          imageUrl={spotcastBgPicture}
-          projectType={"Training"}
-          projectClient={"Personnal"}
-        />
-        <Project
-          projectId={2}
-          projectName={"Spotcast"}
-          imageUrl={spotcastBgPicture}
-          projectType={"Training"}
-          projectClient={"Personnal"}
-        />
-        <Project
-          projectId={3}
-          projectName={"Undefined"}
-          imageUrl={spotcastBgPicture}
-          projectType={"School project"}
-          projectClient={"Personnal"}
-        />
-        <Project
-          projectId={4}
-          projectName={"Speech"}
-          imageUrl={spotcastBgPicture}
-          projectType={"School project"}
-          projectClient={"Personnal"}
-        />
+        {ProjectDatas.map((project) =>(
+          <Project 
+            key={project.id}
+            {...project}
+          />
+        ))}
       </div>
 
       {/* About */}
