@@ -13,20 +13,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/projects/:id" element={<ProjectDetails />} />
       </Routes>
-      {/* <Home 
-        isBlurred = {isBlurred}
-        setIsBlurred = {setIsBlurred}
-        expanded = {expanded}
-        setExpanded = {setExpanded}
-        setSelectedId = {setSelectedId}
-      /> */}
-      {/* <ToDoList 
-        isBlurred = {isBlurred}
-        setIsBlurred = {setIsBlurred}
-        expanded = {expanded}
-        setExpanded = {setExpanded}
-        selectedId = {selectedId}
-      /> */}
     </div>
   )
 }

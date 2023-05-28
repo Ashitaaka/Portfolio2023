@@ -730,13 +730,10 @@ footer {
     }
 
     .project_footer{
-      // display: flex;
-      // justify-content: space-between;
-      // margin-bottom: 1em;
 
       .previous_project, .next_project{
         h2{
-          font-size:1.5em
+          font-size:1.8em
         }
 
         .previous_button, .next_button{
@@ -745,7 +742,7 @@ footer {
       }
     }
   }
-  
+
   /* ABOUT */ 
   .about-container {
     padding: 14vw 5vw 12vw;
