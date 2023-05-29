@@ -14,7 +14,7 @@ const projectDatas =[
         type : "Training",
         description : "Application de prévisions des conditions de surf selon un spot choisi. Possibilité de personnaliser son dashboard et de déplacer les différents widgets.",
         demoLink : "",
-        githubLink : "",
+        githubLink : "https://github.com/WildCodeSchool/2023-02-js-btz-spotcast",
         stack : [ 
             "React JS",
             "Node JS", 
