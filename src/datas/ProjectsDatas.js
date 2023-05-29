@@ -6,8 +6,8 @@ const projectDatas =[
         title : "Spotcast",
         subtitle : "Surf App",
         images : {
-            thumbnail : "../src/assets/images/thumbnails/spotcast_thumb.jpg",
-            picture : "../src/assets/images/pictures/spotcast_motion.mp4"
+            thumbnail : "/thumbnails/spotcast_thumb.jpg",
+            picture : "/pictures/spotcast_motion.mp4"
         },
         client : "School",
         year : "2023",
@@ -34,8 +34,8 @@ const projectDatas =[
         title : "Undefined",
         subtitle : "Travel App",
         images : {
-            thumbnail : "src/assets/images/thumbnails/undefined_thumb.jpg",
-            picture : "../src/assets/images/pictures/undefined_motion.mp4"
+            thumbnail : "/thumbnails/undefined_thumb.jpg",
+            picture : "/pictures/undefined_motion.mp4"
         },
         client : "School",
         year : "2023",
@@ -59,8 +59,8 @@ const projectDatas =[
         title : "To-Do-List",
         subtitle : "Organisation App",
         images : {
-            thumbnail : "src/assets/images/thumbnails/todolist_thumb.jpg",
-            picture : "../src/assets/images/pictures/todolist_motion.mp4"
+            thumbnail : "/thumbnails/todolist_thumb.jpg",
+            picture : "/pictures/todolist_motion.mp4"
         },
         client : "Personnal",
         year : "2023",
@@ -81,8 +81,8 @@ const projectDatas =[
         title : "Speech",
         subtitle : "Social network",
         images : {
-            thumbnail : "src/assets/images/thumbnails/speech_thumb.jpg",
-            picture : "../src/assets/images/pictures/speech_motion.mp4"
+            thumbnail : "/thumbnails/speech_thumb.jpg",
+            picture : "/pictures/speech_motion.mp4"
         },
         client : "School",
         year : "2023",

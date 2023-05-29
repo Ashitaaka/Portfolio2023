@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import ProjectsDatas from '../datas/ProjectsDatas'
@@ -6,7 +6,21 @@ import ProjectsDatas from '../datas/ProjectsDatas'
 const ProjectDetails = () => {
 
   const { id } = useParams();
-  const [projectDatas] = ProjectsDatas.filter((el) => el.title === id);
+  // const [projectDatas] = ProjectsDatas.filter((el) => el.title === id);
+
+  const [projectDatas, setProjectDatas] = useState(null);
+  // get the project datas
+
+  useEffect(()=>{
+
+    setProjectDatas(ProjectsDatas.find((el) => el.title === id));
+
+  },[id])
+
+  
+    if(projectDatas===null){
+      return null;
+    }
 
   // Styles specific to each project like bg-color, etc.
   const styles = {
@@ -21,7 +35,7 @@ const ProjectDetails = () => {
       border: `${projectDatas.color} solid clamp(1px, .2vw, 2px)`
     },
   };
-
+  
   return (
 
   <section 
@@ -99,8 +113,9 @@ const ProjectDetails = () => {
 
       {/* Project images */}
       <div className="project_images">
-        <video className="project_video " controls >
-         <source src={projectDatas.images.picture} type="video/mp4"/>
+        {/* <img src={projectDatas.images.picture} alt="" /> */}
+        <video className="project_video " id={id} controls >
+         <source src={`${projectDatas.images.picture}?id=${id}`} type="video/mp4"/>
         </video>
       </div>
 
