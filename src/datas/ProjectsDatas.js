@@ -13,7 +13,7 @@ const projectDatas =[
         year : "2023",
         type : "Training",
         description : "Application de prévisions des conditions de surf selon un spot choisi. Possibilité de personnaliser son dashboard et de déplacer les différents widgets.",
-        demoLink : "https://www.la-mine.com",
+        demoLink : "",
         githubLink : "",
         stack : [ 
             "React JS",
