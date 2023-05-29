@@ -16,7 +16,6 @@ const Contact = () => {
         },
         {
         scrollTrigger: {
-          markers: true,
           trigger: el,
           start: "top 100%",
           end: "top 85%",
