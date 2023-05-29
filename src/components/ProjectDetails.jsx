@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import ProjectsDatas from '../datas/ProjectsDatas'
+import Video from './Video';
 
 const ProjectDetails = () => {
 
@@ -114,9 +115,7 @@ const ProjectDetails = () => {
       {/* Project images */}
       <div className="project_images">
         {/* <img src={projectDatas.images.picture} alt="" /> */}
-        <video className="project_video " id={id} controls >
-         <source src={`${projectDatas.images.picture}?id=${id}`} type="video/mp4"/>
-        </video>
+        <Video videoURL={projectDatas.images.picture} id={id}/>
       </div>
 
       {/* Project Stack */}
