@@ -40,13 +40,13 @@ const About = () => {
                         Co-fondateur du studio de création graphique la-mine.com, je m'aventure désormais dans le monde passionnant du développement web
                     </p>
                     <p>
-                        Au fil de mes 14 années en tant que designer graphique indépendant et salarié, j'ai cultivé un ensemble de qualités qui sont des atouts majeurs pour ma nouvelle carrière de développeur web.
+                        Au fil de mes 14 années en tant que designer graphique indépendant et salarié, j'ai cultivé un ensemble de compétences qui sont des atouts majeurs pour ma nouvelle carrière de développeur web.
                     </p>
                     <p>
-                        Ma créativité artistique, ma maîtrise des outils de conception, ma sensibilité à l'expérience utilisateur et ma capacité d'adaptation font de moi un professionnel polyvalent.
+                        Ma créativité, ma maîtrise des outils de conception, ma sensibilité à l'expérience utilisateur et ma capacité d'adaptation font de moi un professionnel polyvalent.
                     </p>
                     <p>
-                        Je possède une vision unique pour communiquer visuellement et résoudre des problèmes de manière novatrice. Cette expérience diversifiée m'a préparé à relever les défis du développement web avec confiance.
+                        Je possède une vision singulière pour communiquer visuellement et résoudre des problèmes de manière novatrice. Cette expérience diversifiée m'aide à relever les nouveaux défis rencontrés dans le cadre du développement web.
                     </p>
                     <p className='emphasis'>
                         Je n’en suis qu’au commencement de cette nouvelle aventure mais je suis déjà passionné et ai soif d’apprendre!

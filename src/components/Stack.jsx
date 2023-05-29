@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+
+gsap.registerEffect(ScrollTrigger);
 
 const Stack = () => {
+ 
   return (
     <div className='stack_container'>
         <p className="stack">React JS</p>
