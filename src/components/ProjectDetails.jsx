@@ -136,7 +136,7 @@ const ProjectDetails = () => {
       </div>
 
       {/* Footer */}
-      {/* <div className={projectDatas.id === 1 ? "project_single_footer project_footer" : "project_footer"}>
+      <div className={projectDatas.id === 1 ? "project_single_footer project_footer" : "project_footer"}>
         {projectDatas.id > 1 
           ? <Link 
               to={`/projects/${ProjectsDatas[projectDatas.id - 2].title}`}
@@ -166,7 +166,7 @@ const ProjectDetails = () => {
             </Link>
           : null
         } 
-      </div> */}
+      </div>
 
   </section>
 

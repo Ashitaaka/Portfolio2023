@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const Video = ({ videoURL }) => {
     
-  return (
-    <video className="project_video " autoPlay controls >
-        <source src={videoURL} type="video/mp4"/>
-    </video>
-  )
+  useEffect(() => {
+    // Update video source when the videoURL prop changes
+    const videoElement = document.getElementById('video-player');
+    videoElement.src = videoURL;
+  }, [videoURL]);
+  
+  return <video id="video-player" className="project_video " autoPlay controls />
+
+  
 }
 
 export default Video
