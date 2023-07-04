@@ -39,7 +39,7 @@ const projectDatas =[
         },
         client : "School",
         year : "2023",
-        type : "Training",
+        type : "Hackathon",
         description : "Projet d'école codée en 24h pour un Hackathon sur le thème des 'vacances'. L'application permet à l'utilisateur de choisir un pays, une ville ainsi que des dates et lui retourne la liste des évènements ayant lieu à cet endroit durant la période choisie",
         demoLink : "https://undefined-ashitaaka.vercel.app/",
         githubLink : "https://github.com/Ashitaaka/undefined",
@@ -78,6 +78,34 @@ const projectDatas =[
     },
     {
         id: 4,
+        title : "Emmaüs",
+        subtitle : "Mobile estimation App",
+        images : {
+            thumbnail : "/thumbnails/emmaus_thumb.jpg",
+            picture : "/pictures/emmaus_motion.mp4"
+        },
+        client : "School",
+        year : "2023",
+        type : "Hackathon",
+        description : "Projet d'école codée en 24h lors d'un Hackathon pour le client 'Emmaüs'. La demande client était de développer un algorithme qui estime le prix de vente des téléphones issus de dons, en fonction de leurs caractéristiques techniques et des critères/prix qui nous ont été fournis.",
+        demoLink : "",
+        githubLink : "",
+        stack : [ 
+            "React JS",
+            "Node JS", 
+            "Express JS", 
+            "API", 
+            "SQL", 
+            "Javascript", 
+            "HTML 5", 
+            "CSS 3", 
+            "Git"
+        ],
+        backgroundColor : "#F7F7FF",
+        color : "#7171B3"
+    },
+    {
+        id: 5,
         title : "Speech",
         subtitle : "Social network",
         images : {
